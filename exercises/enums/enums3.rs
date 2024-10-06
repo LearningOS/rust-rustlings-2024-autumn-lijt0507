@@ -48,9 +48,9 @@ impl State {
         // Remember: When passing a tuple as a function argument, you'll need
         // extra parentheses: fn function((t, u, p, l, e))
         match message {
-            Message::Move(Point) => self.move_position(Point),
+            Message::Move(point) => self.move_position(point),
             Message::Quit => self.quit(),
-            Message::Echo(String) => self.echo(String),
+            Message::Echo(string) => self.echo(string),
             Message::ChangeColor(color) => self.change_color(color),
         }
     }
